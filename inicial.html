@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Quadrado Rotativo</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+  <link rel="stylesheet" href="index.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500&display=swap" rel="stylesheet">
+  
+</head>
+<body>
+    <div id="container">
+      <div >
+        <button id="start_stop">INICIAR</button>
+      </div>
+      <div hidden>
+        <input type="text" id="slider_number">
+        <input id="slider" type="range" min="-360" max="360" value="0" step="1">
+      </div>
+      <div hidden>
+        <input type="text" id="slider_alt_number">
+        <input id="slider_alt" type="range" min="-10" max="10" value="0" step="1">
+      </div>
+      <div hidden>
+        <input type="text" id="valor_vento">
+        <input id="valor_vento_inp" type="range" min="0" max="1000" value="0" step="0.001">
+      </div>
+
+      <div hidden>
+        <input type="text" id="valor_altitude">
+        <input id="valor_altitude_inp" type="range" min="0" max="9999" value="0" step="0.001">
+      </div>
+    </div>
+
+    <img src="poligon.png" alt="" id="poligon">
+    <div id="circulo_central">
+    </div>
+    <div id="menu_cima">
+      <div class="timer">
+        <div for="id_timer">TIMER</div>
+        <div id="timer_val">00:00</div>
+      </div>
+
+      <div class="div_monitor">
+        <div class="white">WPT</div>
+        <div class="orange">KMHR</div>
+      </div>
+
+      <div class="div_monitor">
+        <div class="white">DIST</div>
+        <div class="orange">17.4m</div>
+      </div>
+
+      <div class="div_monitor">
+        <div class="white">DISTD</div>
+        <div class="orange">17.4m</div>
+      </div>
+
+      <div class="div_monitor">
+        <div class="white">ETE</div>
+        <div class="orange">10:08</div>
+      </div>
+      
+      <div class="div_monitor">
+        <div class="white">FOD</div>
+        <div class="orange">15.5gal</div>
+      </div>
+
+      <div class="div_monitor">
+        <div class="white">FOD</div>
+        <div class="orange">15.5gal</div>
+      </div>
+      <div class="div_monitor">
+        <div class="white">FOD</div>
+        <div class="orange">15.5gal</div>
+      </div>
+      <div class="div_monitor">
+        <div class="white">FOD</div>
+        <div class="orange">15.5gal</div>
+      </div>
+      <div class="timer_flex">
+        <div style="display:grid; align-items: center;width:200px;">
+          <div class="white">XPDR</div>
+          <div class="green">1200</div>
+        </div>
+        <div id="ident">
+          IDENT
+        </div>
+      </div>
+
+      <div id="audio">
+        AUDIO
+      </div>
+
+      <div id="timer_emergency">
+        <div style="display:flex;">
+          <div style="display: grid;">
+            <div>
+              COM
+            </div>
+            <div style="font-size: 20px;">
+              121.500
+            </div>
+            <div>
+              emergency
+            </div>
+          </div>
+          <div style="display: grid;margin-left: 15px;">
+            <div>
+              STBY
+            </div>
+            <div style="color:rgb(0, 166, 255);font-size: 20px;">
+              120.650
+            </div>
+            <div style="font-size: 10px;">
+              KMHR TOWER
+            </div>
+          </div>
+        </div>
+
+        <div id="fuel">
+          <img src="664886.png" alt="" id="img_fuel">
+          <div style="margin-top: -15px;">
+            FUEL
+          </div>
+        </div>
+
+
+      </div>
+    </div>
+    <div id="quadrado_rel">
+        <div class="teste">
+        </div>
+        <div id="parte_verde" style="color:white;">
+          <div id="p">
+            <p>-</p>
+            <p>-</p>
+            <p>-</p>
+            <p>-</p>
+            <p>-</p>
+            <p>-</p>
+            <p>-</p>
+            </div>
+        </div>
+        <div id="parte_cima">
+          <p>TAS</p><p style="color:orange">0120</p><p style="color:orange">KT</p>
+        </div>
+        <div id="parte_baixo">
+        <p>GS</p><p style="color:orange">0070</p><p style="color:orange">KT</p>
+        </div>
+    </div>
+
+    <div id="quadrado_rel_dir">
+      <div class="teste_dir">
+      </div>
+      <div id="parte_verde_dir" style="color:white;">
+        <div id="p_dir">
+          <p>-</p>
+          <p>-</p>
+          <p>-</p>
+          <p>-</p>
+          <p>-</p>
+          <p>-</p>
+          <p>-</p>
+          <p>-</p>
+          <p>-</p>
+          <p>-</p>
+          <p>-</p>
+          <p>-</p>
+          <p>-</p>
+          <p>-</p>
+          <p>-</p>
+        </div>
+      </div>
+      <div id="parte_cima_dir">
+      <p style="color:orange">6500</p><p style="color:orange">FT</p>
+      </div>
+      <div id="parte_baixo_dir">
+      <p style="color:orange">29.86</p><p style="color:orange">IN</p>
+      </div>
+
+  </div>
+  
+
+    <div id="relogio_dir">
+      <div class="number_rel_one_dir"></div>
+      <div class="number_rel_two_dir"></div>
+      <div class="number_rel_three_dir"></div>
+      <div class="number_rel_four_dir"></div>
+    </div>
+    <div id="relogio">
+      <div class="number_rel_one"></div>
+      <div class="number_rel_two"></div>
+      <div class="number_rel_three"></div>
+      <div class="number_rel_four"></div>
+    </div>
+    <img src="Group 5.png" alt="é isso aiiii" id="airviao">
+
+    <div id="quadrado">
+      <p>a</p>
+    </div>
+    <div id="dn_up">
+      <img src="regua.png" alt="">
+    </div>
+    <div id="l_r">
+      <img src="regua_baixo.png" alt="" style="margin-top: -5px;margin-left: 4px;">
+    </div>
+    <div id="regua_medidor">
+      <img src="medidor.png" alt="">
+      <div id="circulo_regua"></div>
+    </div>
+
+    <div id="centro_medidor">
+      <img src="centro_medidor.png" alt="">
+    </div>
+    <div id="ret_esq">
+      <div class="cima_ret">HDG</div>
+      <div class="baixo_ret"  style="color:violet">180º</div>
+    </div>
+    <div id="ret_dir">
+      <div class="cima_ret">CRS</div>
+      <div class="baixo_ret" style="color:aqua">045º</div>
+    </div>
+    <div id="bussola">
+        <img src="bussola.png" alt="">
+    </div>
+    <div id="aviao">
+      <img src="aviao.png" alt="">
+    </div>
+    <div id="menu_baixo">
+      <p >Obs: Utilizar resolução 1920x1080 | Um produto MFSIM | Desenvolvido pela <a href="https://www.youtan.com.br/" target="_blank">Youtan</a></p>
+    </div>
+
+    <script src="index.js"></script>
+
+</body>
+</html>

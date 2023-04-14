@@ -1,0 +1,665 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow: hidden;
+}
+#quadrado {
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  width: 2500px;
+  height: 2500px;
+  border-radius: 50%;
+  background: linear-gradient(
+  to top,
+  #a77b0e 0%,
+  #805d0c 50%,
+  white 50%,
+  #417daf 51%
+);
+  margin-top: -715px;
+  margin-left: -300px;
+  transform: rotate(0deg);
+}
+
+#quadrado p {
+  color: white;
+  font-size: 40px
+}
+
+#relogio{
+  position: absolute;
+  top: 47%;
+  right:67.5%;
+  z-index: 1;
+  transform: translate(-50%, 50%);
+  display: flex;
+  align-items: center;
+}
+ 
+#relogio > div {
+  background:black;
+  position: relative;
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  line-height: 30px;
+  font-size: 25px;
+  letter-spacing: 2px;
+  font-family: 'Orbitron', sans-serif;
+  color: white;
+  overflow: hidden;
+}
+
+#relogio > div > div{
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  transition: all 800ms ease-in-out;
+}
+
+#relogio > div.animate{
+  animation:bounce 800ms ease-in-out;
+}
+@keyframes bounce{
+  0%, 100%{
+    margin-top: 0px;
+  }
+  50% {
+    margin-top: -10px;
+  }
+}
+
+#relogio_dir{
+  position: absolute;
+  top: 47%;
+  right:20%;
+  z-index: 1;
+  transform: translate(-50%, 50%);
+  display: flex;
+  align-items: center;
+}
+ 
+#relogio_dir > div {
+  background:black;
+  position: relative;
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  line-height: 30px;
+  font-size: 25px;
+  letter-spacing: 2px;
+  font-family: 'Orbitron', sans-serif;
+  color: white;
+  overflow: hidden;
+}
+
+#relogio_dir > div > div{
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  transition: all 800ms ease-in-out;
+}
+
+#relogio_dir > div.animate{
+  animation:bounce 800ms ease-in-out;
+}
+@keyframes bounce{
+  0%, 100%{
+    margin-top: 0px;
+  }
+  50% {
+    margin-top: -10px;
+  }
+}
+
+#quadrado_rel{
+  position: absolute;
+  top: 0%;
+  right:65.5%;
+  z-index: 1;
+  transform: translate(-50%, 50%);
+  display: flex;
+  align-items: end;
+}
+
+#quadrado_rel .teste{
+  background:black;
+  position: relative;
+  opacity: 0.5;
+  width: 150px;
+  height: 500px;
+  font-size: 30px;
+  font-family: 'Orbitron', sans-serif;
+  color: white;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+#parte_verde {
+  background-color: rgb(0, 255, 0);
+  width: 10px;
+  height: 500px;
+}
+
+#quadrado_rel .teste > div {
+  margin-top: 29px;
+  width: 50px;
+  height: 50px;
+  margin-left: 50px;
+  display: flex;
+  justify-content: end;
+}
+
+
+#parte_verde > div > p {
+  margin-left: -15px;
+  z-index: 1;
+  margin-top: 60px;
+
+}
+
+#parte_verde > div {
+  margin-top: -50px;
+  
+
+}
+
+
+
+
+#imgfoda{
+  position: absolute;
+  top: 45%;
+  right: 50%;
+  z-index: 1;
+}
+
+#airviao{
+  position: absolute;
+  top: 47%;
+  left: 44%;
+  z-index: 1;
+}
+
+#slider_alt {
+  position: absolute;
+  top: 150px;
+  right: 20px;
+  z-index: 1;
+}
+
+#slider_alt_number{
+  position: absolute;
+  top: 150px;
+  right: 160px;
+  z-index: 1;
+  width: 30px;
+}
+
+#valor_vento {
+  position: absolute;
+  top: 90px;
+  right: 160px;
+  z-index: 1;
+  width: 30px;
+}
+
+#valor_vento_inp{
+  position: absolute;
+  top: 90px;
+  right: 20px;
+  z-index: 1;
+}
+
+#valor_altitude {
+  position: absolute;
+  top: 120px;
+  right: 160px;
+  z-index: 1;
+  width: 30px;
+}
+
+#valor_altitude_inp{
+  position: absolute;
+  top: 120px;
+  right: 20px;
+  z-index: 1;
+}
+
+#circulo_central{
+  position: absolute;
+  top: 28%;
+  right: 43%;
+  background-image: url("teste.png");
+  background-repeat: no-repeat;
+  z-index: 1;
+  width: 320px;
+  height: 300px;
+  border-radius: 50%;
+  
+}
+
+#poligon{
+  position: absolute;
+  top: 32%;
+  left: 48.8%;
+  z-index: 1;
+}
+
+
+#slider {
+  position: absolute;
+  top: 120px;
+  right: 20px;
+  z-index: 1;
+}
+
+#start_stop{
+  position: absolute;
+  top: 100px;
+  right: 20px;
+  z-index: 1;
+  width: 120px;
+  height: 60px;
+  border-radius: 10px;
+  border: none;
+  background-color: #303030;
+  color: white;
+
+}
+#start_stop:hover{
+  background-color: #202020;
+  cursor: pointer;
+}
+
+
+#quadrado_rel_dir{
+  position: absolute;
+  top: 0%;
+  right:17.5%;
+  z-index: 1;
+  transform: translate(-50%, 50%);
+  display: flex;
+  align-items: end;
+}
+
+#quadrado_rel_dir .teste_dir{
+  background:black;
+  position: relative;
+  opacity: 0.5;
+  width: 150px;
+  height: 500px;
+  font-size: 30px;
+  font-family: 'Orbitron', sans-serif;
+  color: white;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+#parte_verde_dir {
+  background-color: white;
+  width: 10px;
+  height: 500px;
+}
+
+#p_dir  {
+  background-color: white;
+  color: white;
+  margin-left: 10px;
+  margin-top: -10px;
+}
+
+#quadrado_rel_dir .teste_dir > div {
+  margin-top: 29px;
+  width: 50px;
+  height: 50px;
+  margin-left: 50px;
+  display: flex;
+  justify-content: end;
+}
+
+#parte_cima {
+  background-color: black;
+  opacity: 0.8;
+  width: 161px;
+  height: 50px;
+  border-radius: 40px 40px 0px 0px;
+  position: absolute;
+  margin-bottom: 500px;
+  display: flex;
+}
+
+#parte_baixo{
+  background-color: black;
+  opacity: 0.8;
+  width: 162px;
+  height: 50px;
+  border-radius: 0px 0px 40px 40px;
+  position: absolute;
+  margin-bottom: -50px;
+  display: flex;
+}
+
+#parte_baixo p{
+  color: white;
+  font-size: 15px;
+  margin-left: 16px;
+  font-family: 'Orbitron', sans-serif;
+
+}
+
+#parte_cima p{
+  color: white;
+  margin-top: 20px;
+  font-size: 15px;
+  margin-left: 15px;
+  font-family: 'Orbitron', sans-serif;
+}
+
+#parte_cima_dir {
+  background-color: black;
+  opacity: 0.8;
+  width: 161px;
+  height: 50px;
+  border-radius: 40px 40px 0px 0px;
+  position: absolute;
+  margin-bottom: 500px;
+  display: flex;
+  justify-content: end;
+}
+
+#parte_baixo_dir{
+  background-color: black;
+  opacity: 0.8;
+  width: 162px;
+  height: 50px;
+  border-radius: 0px 0px 40px 40px;
+  position: absolute;
+  margin-bottom: -50px;
+  display: flex;
+  justify-content: end;
+}
+
+#parte_baixo_dir p{
+  color: white;
+  font-size: 15px;
+  margin-right: 16px;
+  font-family: 'Orbitron', sans-serif;
+
+}
+
+#parte_cima_dir p{
+  color: white;
+  margin-top: 20px;
+  font-size: 15px;
+  margin-right: 15px;
+  font-family: 'Orbitron', sans-serif;
+}
+
+#menu_cima{
+  position: absolute;
+  top: 0px;
+  z-index: 1;
+  height: 80px;
+  width: 100vw;
+  background-color: black;
+  display: flex;
+}
+
+#menu_baixo{
+  position: absolute;
+  bottom: 0px;
+  z-index: 1;
+  height: 30px;
+  width: 100vw;
+  background-color: black;
+  display: flex;
+  justify-content: center;
+}
+
+#menu_baixo a {
+  text-decoration: none;
+  color: orange;
+}
+
+#menu_baixo p {
+  font-size: 15px;
+  margin-top: 8px;
+  color: orange;
+  
+}
+
+.timer{
+  display: grid;
+  align-items: center;
+  border: white 1px solid;
+  width: 120px;
+  height: 65px;
+  margin-top: 7px;
+  margin-left: 15px;
+  color: white;
+  text-align:center;
+  font-family: 'Orbitron', sans-serif;
+  border-radius: 5px;
+}
+.timer:hover{
+  cursor: pointer;
+}
+
+.div_monitor{
+  display: grid;
+  align-items: center;
+  width: 120px;
+  height: 65px;
+  margin-top: 7px;
+  margin-left: 15px;
+  text-align:center;
+  font-family: 'Orbitron', sans-serif;
+  border-radius: 5px;
+}
+
+.white{
+  color: white;
+
+}
+.orange{
+  color: orange;
+}
+
+.green{
+  color: greenyellow;
+}
+
+#ident{
+  display: grid;
+  align-items: center;
+  width: 200px;
+  height: 65px;
+  color: white;
+  text-align:center;
+  font-family: 'Orbitron', sans-serif;
+  border-radius: 5px;
+}
+
+#ident:hover{
+  cursor:pointer
+}
+
+.timer_flex{
+  display: flex;
+  border: white 1px solid;
+  width: 200px;
+  height: 65px;
+  margin-top: 7px;
+  margin-left: 15px;
+  color: white;
+  text-align:center;
+  font-family: 'Orbitron', sans-serif;
+  border-radius: 5px;
+}
+
+#audio{
+  display: grid;
+  align-items: center;
+  width: 100px;
+  height: 65px;
+  margin-top: 7px;
+  margin-left: 15px;
+  color: white;
+  text-align:center;
+  font-family: 'Orbitron', sans-serif;
+  border-radius: 5px;
+  border: white 1px solid;
+}
+
+#audio:hover{
+  cursor: pointer;
+}
+
+#timer_emergency{
+  display: flex;
+  border: white 1px solid;
+  width: 220px;
+  height: 65px;
+  margin-top: 7px;
+  margin-left: 15px;
+  color: white;
+  text-align:center;
+  font-family: 'Orbitron', sans-serif;
+  border-radius: 5px;
+}
+
+#img_fuel{
+  width: 50px;
+}
+
+#fuel{
+  display: grid;
+  align-items: center;
+  width: 500px;
+  height: 65px;
+  margin-left: 15px;
+  color: white;
+  text-align:center;
+  font-family: 'Orbitron', sans-serif;
+  border-radius: 5px;
+  border: white 1px solid;
+}
+
+#dn_up{
+  background-color: black;
+  border-radius: 5px;
+  width: 38px;
+  height: 161px;
+  margin-top: 820px;
+  margin-left: 480px;
+  position: absolute;
+  box-shadow: 2px 3px 3px black;
+}
+
+#l_r{
+  background-color: black;
+  width: 161px;
+  height: 38px;
+  margin-top: 1000px;
+  margin-left: 480px;
+  position: absolute;
+  box-shadow: 2px 3px 3px black;
+  border-radius: 5px;
+}
+
+#regua_medidor{
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  background-color: black;
+  width: 161px;
+  height: 38px;
+  border-radius: 15px;
+  top: 62%;
+  left: 45%;
+}
+
+#circulo_regua{
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  background-color: white;
+  border-radius: 50%;
+  margin-top: 3px;
+  margin-left: 3px;
+
+}
+
+#centro_medidor{
+  width: 500px;
+  height: 500px;
+  position: absolute;
+  background-color: transparent;
+  top: 37%;
+  left: 45.5%;
+}
+
+#ret_esq{
+  background-color: black;
+  width: 161px;
+  height: 38px;
+  margin-top: 740px;
+  margin-left: 1050px;
+  position: absolute;
+  box-shadow: 2px 3px 3px black;
+  border-radius: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#ret_dir{
+  background-color: black;
+  width: 161px;
+  height: 38px;
+  margin-top: 740px;
+  margin-left: 680px;
+  position: absolute;
+  border-radius: 15px;
+  display: flex;
+  justify-content: center;
+  box-shadow: 2px 3px 3px black;
+  align-items: center;
+}
+
+.cima_ret{
+  color: white;
+  font-size: 20px;
+  font-family: 'Orbitron', sans-serif;
+
+}
+.baixo_ret{
+  font-size: 20px;
+  margin-left: 5px;
+  font-family: 'Orbitron', sans-serif;
+
+}
+
+#bussola{
+  position: absolute;
+  top: 71%;
+  left: 42%;
+}
+#bussola img{
+  width: 280px;
+}
+
+#aviao{
+  position: absolute;
+  top: 76%;
+  left: 46.5%;
+  transform: rotate(286deg);
+}
+#aviao img{
+  width: 150px;
+}
