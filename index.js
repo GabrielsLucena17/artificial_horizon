@@ -18,6 +18,7 @@ $("#start_stop").click(()=>{
         $("#slider_alt").val(10)
         setInterval(ContarSegundos, 1000);
         setInterval(ContarSegundosSlider, 5000);
+        startTime()
         
     }else{
         $("#start_stop").text("INICIAR")
@@ -38,6 +39,10 @@ valor_vento_inp.addEventListener("input", () => {
     funcaoVento(valor)
 
 })
+
+function startTime() {
+    
+}
 function funcaoVento(valor) {
 
     if(valor < 10){
