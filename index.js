@@ -39,9 +39,47 @@ valor_vento_inp.addEventListener("input", () => {
     funcaoVento(valor)
 
 })
+const minutos = document.getElementById("minutos")
+const segundos = document.getElementById("segundos")
+
+let minutosE = 0
+let segundosE = 0
+let mili = 0 
+let interval;
+let segundosF = 0;
+let minutosF = 0;
 
 function startTime() {
-    
+    interval = setInterval(() => {
+        mili += 10;
+        if (mili === 1000){
+            segundosE++;
+            mili = 0;
+            console.log(segundosE)
+            
+        }
+
+        if (segundosE == 59){
+            minutosE++;
+            console.log(segundosE)
+            segundosE = 00;
+        }
+        
+        if (segundosE < 10){
+            segundosF = `0${segundosE}`
+        }else{
+            segundosF = segundosE
+        }
+
+        if (minutosE < 10){
+            minutosF = `0${minutosE}`
+        }else{
+            minutosF = minutosE
+        }
+
+        segundos.textContent = segundosF
+        minutos.textContent = minutosF
+    },10)
 }
 function funcaoVento(valor) {
 
